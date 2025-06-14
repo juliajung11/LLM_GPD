@@ -37,19 +37,6 @@ This repository recreates Team Populism’s Global Populism Database (GPD) wor
    ```
 4. **Run the script.** It automatically handles the Python calls via *reticulate*, builds/queries the index, and prints the populism score with supporting quotes.
 
-\--- Python env --- python -m venv .venv && source .venv/bin/activate pip install sentence-transformers faiss-cpu numpy
-
-# --- R side ---
-
-R -e "install.packages(c('reticulate', 'AskOllama'))"
-
-# Build vector index
-
-python build\_index\_v3.py
-
-# Edit target speech in RAG\_GPD.R (new\_speech <- "…")
-
-Rscript RAG\_GPD.R
 ---
 
 ## License
