@@ -265,6 +265,13 @@ new_speech <- "" # Add here the Speech we want to code
 # `reticulate::source_python()` pulls **build_index_v3.py** into the current
 # R session.  Everything defined in that Python file becomes accessible via
 # the `py$` object or as native R references when we instantiate classes.
+
+py_install(
+  packages = c("sentence-transformers", "faiss-cpu"),  # Add other packages that are needed
+  method   = "pip"    
+)
+
+
 source_python("build_index_v3.py")
 
 # ------------------------------------------------------------------------- #
